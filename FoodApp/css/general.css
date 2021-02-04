@@ -1,8 +1,9 @@
+@import url(footer.css);
+
 .body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-
 }
 
 .titulo{
@@ -11,7 +12,6 @@
     margin-bottom: 10px;
 
 }
-
 
 /*navbar*/
 header {
@@ -141,10 +141,11 @@ header nav ul li a:hover {
         position: absolute;
         width: 100%;
         height: calc(100vh - 50px);
-        background: #FA8128;
+        background: #fa7f28da;
         top: 50px;
         left: -100%;
         transition: 0.5s;
+        z-index: 100;
     }
 
     header nav.active {
@@ -179,51 +180,6 @@ header nav ul li a:hover {
     padding-left: 40px;
 }
 
-/*footer*/
-
-.footer-top{
-    
-    background: #FA8128;   
-    box-sizing: border-box;
-    font-weight: 700;
-    text-decoration: none;
-
-}
-
-.segment-one{
-
-    color: white;
-    box-sizing: border-box;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-
-.segment-two{
-   
-padding-top: 22px;
-color: white;
-text-transform: uppercase;
-font-weight: 700;
-text-decoration: none;
-
-}
-
-.segment-three {
-
-    padding-top: 22px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-decoration: none;
-
-}
-
-.fa-fw{
-
-    color: rgb(238, 238, 238);
-    margin-right: 10px;
-}
 
 
 
