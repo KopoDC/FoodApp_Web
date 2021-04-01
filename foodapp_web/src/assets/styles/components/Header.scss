@@ -1,0 +1,26 @@
+@import "../Vars.scss";
+/*navbar*/
+.logo {
+    color: white;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    background: $main-color;   
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: $main-color;
+    color: white;
+}
+
+.nav-link{
+    font-family: $theme-font;
+    color: white;
+  }
+

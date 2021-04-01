@@ -1,0 +1,26 @@
+@import "../Vars.scss";
+
+
+.titulo-producto{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.image{
+      margin-top: 15px;
+      margin-bottom: 15px;
+}
+
+.dropdown-Toggle-fixed{
+      background-color: $main-color;
+      border-color:#f9f9f9;
+      margin-bottom: 20px;
+      margin-top: -20px;
+}
+
+.container-layout{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+

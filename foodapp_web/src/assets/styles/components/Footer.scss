@@ -1,0 +1,55 @@
+@import "../Vars.scss";
+
+.footer-top{
+    color: white;
+    background-color: $main-color;
+    padding-top: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.segment-one{
+    color: white;
+    font-weight: 700;
+}
+
+
+.segment-two{   
+    color: white;
+    font-weight: 300;
+}
+
+.segment-three {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.fa-fw{
+    align-content: center;
+    margin-left: 40px;
+    color:#5c164a;
+}
+
+
+#p-copyright{
+    font-weight: 300;
+    text-transform: none;
+    text-align: center;
+}
+
+
+#h5-followme{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+#h5-about-us{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+a{
+    color:#5c164a;
+}

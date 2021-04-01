@@ -1,0 +1,29 @@
+@import "../styles/Vars.scss";
+@import "../styles/Media.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: $theme-font;
+}
+
+.titulo{
+    margin-top: 80px;
+    margin-bottom: 10px;
+
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content-wrap {
+    flex: 1;
+  }
+
+ 
