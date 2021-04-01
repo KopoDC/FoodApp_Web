@@ -16,5 +16,4 @@ function Inicio (){
         </div>
     </Container>)
 }
-
 export default Inicio;
