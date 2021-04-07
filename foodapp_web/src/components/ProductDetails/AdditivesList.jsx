@@ -5,7 +5,9 @@ import '../../assets/styles/components/ProductDetail.scss';
 const AddittivesList = ({Name}) =>{
 
     return (
-        <li>{Name}</li>
+        <ul>
+            <li>{Name}</li>
+        </ul>
     );
 }
 

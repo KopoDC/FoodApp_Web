@@ -17,7 +17,7 @@ function ProductDetail({children, Name, NetContent, Brand, IngredientsText}){
          <Row>
             <Col sm={4}>
                 <Row className="justify-content-md-center">
-                    <Col md="auto"><Image className="image" src="./cocacola600.png" rounded /></Col>
+                    <Col md="auto"><Image className="image" src='http://localhost:3001/cocacola600.png' rounded alt="coca"/></Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col md="auto" xs={6}>
@@ -34,9 +34,12 @@ function ProductDetail({children, Name, NetContent, Brand, IngredientsText}){
                 <Row>
                     <Col>
                         <h4 className="titulo-producto">Caracteristicas del producto</h4>
-                            <li>Cantidad: {NetContent}</li>
-                            <li>Marcas: {Brand}</li>
-                            <li>Descripción: {IngredientsText}</li>
+                        <ul>
+                            <li><strong> Cantidad: </strong>{NetContent}</li>
+                            <li><strong>Marcas: </strong>{Brand}</li>
+                            <li><strong>Descripción: </strong>{IngredientsText}</li>
+                        </ul>
+
                     </Col>
                 </Row>
                 <Row>

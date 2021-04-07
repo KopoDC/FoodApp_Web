@@ -5,6 +5,7 @@ import ProductDetail from '../components/ProductDetails/ProductDetail'
 import AddittivesList from '../components/ProductDetails/AdditivesList'
 import IngredientsList from '../components/ProductDetails/IngredientsList'
 import { useParams } from 'react-router-dom';
+import NotFound from './NotFound';
 
 
 
@@ -13,31 +14,36 @@ const ProductDetails = () => {
         'products':[], 'additives':[], 'ingredients': []
     });
     
-    const {id} = useParams();
+    const {barcode} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/products/${id}`)
+        fetch(`http://localhost:3000/products/${barcode}`)
         .then(response => response.json())
         .then(data => setProduct(data));
     },[])
-    
     const detalleProducto = productGet.products;
-    
-    return(
-        <>
-            <ProductDetail {...detalleProducto}>
-                {
-                    productGet.ingredients.map(item =>
-                        <IngredientsList key={item.Name} {...item}/>
-                    )
-                }
-                {productGet.additives.map(item =>
-                    <AddittivesList key={item.idAdditive} {...item}/>
-                    )
-                }
-            </ProductDetail>       
-        </>
-    );
+
+    if(detalleProducto !== undefined){
+        return(
+            <>
+                <ProductDetail {...detalleProducto}>
+                    {productGet.ingredients.length > 0 
+                        ? productGet.ingredients.map(item => <IngredientsList key={item.Name} {...item}/>)
+                        : <p>Este producto todavía no tiene información sobre sus ingredientes</p>
+                    }
+                    {productGet.additives.length > 0
+                        ? productGet.additives.map(item => <AddittivesList key={item.idAdditive} {...item}/>)
+                        : <p>Este producto todavía no tiene información sobre sus Aditivos</p>
+                    }
+                </ProductDetail> 
+            </>
+        );
+    }else{
+        return(
+            <NotFound></NotFound>
+        );
+    }
+
 }
 
 export default ProductDetails;
