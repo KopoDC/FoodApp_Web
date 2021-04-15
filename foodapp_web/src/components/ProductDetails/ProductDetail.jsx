@@ -17,14 +17,14 @@ function ProductDetail({children, Name, NetContent, Brand, IngredientsText}){
          <Row>
             <Col sm={4}>
                 <Row className="justify-content-md-center">
-                    <Col md="auto"><Image className="image" src='http://localhost:3001/cocacola600.png' rounded alt="coca"/></Col>
+                    <Col md="auto"><Image className="image" src={process.env.PUBLIC_URL + '/notfound.jpeg'} rounded alt={Name}/></Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col md="auto" xs={6}>
                         <Dropdown>
                             <Dropdown.Toggle variant="secondary" className="dropdown-Toggle-fixed"><ShareFill/></Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Facebook</Dropdown.Item>
+                                <Dropdown.Item href="">Facebook</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </Col>

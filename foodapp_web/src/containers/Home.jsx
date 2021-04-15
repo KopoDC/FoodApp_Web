@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Inicio from '../components/Inicio'
+import Inicio from '../components/home/Inicio'
 import '../assets/styles/App.scss'
-import Categories from '../components/Categories'
-import Carousel from '../components/Carousel'
-import CarouselItem from '../components/CarouselItem'
+import Categories from '../components/home/Categories.jsx'
+import Carousel from '../components/home/Carousel.jsx'
+import CarouselItem from '../components/home/CarouselItem.jsx'
+import NotProducts from '../components/home/NotProducts.jsx'
 
 
 const Home = () => {
@@ -30,11 +31,14 @@ const Home = () => {
         <>
             <Inicio/>
             <Categories>
-                <Carousel>
-                    {productsUpdated.map(item =>
-                        <CarouselItem key={item.Name} {...item} />
-                    )}
-                </Carousel>
+                {productsUpdated.length > 0
+                    ? <Carousel>
+                        {
+                            productsUpdated.map(item =><CarouselItem key={item.Name} {...item} />)
+                        }
+                      </Carousel>
+                    : <NotProducts></NotProducts>
+                }
             </Categories>
         </>
     );
