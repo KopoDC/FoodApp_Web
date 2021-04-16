@@ -12,21 +12,11 @@ const Home = () => {
     const [productsUpdated, setProductsUpdated] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:3000/products/lastProducts/Update')
+        fetch('http://localhost:3001/products/lastProducts/Update')
         .then(response => response.json())
         .then(data => setProductsUpdated(data));
     }, []);
 
-    console.log(productsUpdated);
-    // useEffect(() =>{
-    //     const fetchProducts = async ()=>{
-    //         const resp = await fetch('http://localhost:3000/products/lastProducts/Update');
-    //         const newRespnse = await resp.json();
-    //         setProductsUpdated(newRespnse);
-    //     };
-    //     fetchProducts();
-    // },[]);  
-    
     return(
         <>
             <Inicio/>

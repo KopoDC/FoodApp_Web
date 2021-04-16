@@ -8,14 +8,14 @@ function Header(){
 
     return(
         <Navbar variant="dark" expand="lg">
-        <Navbar.Brand className="logo" href="#home">+FoodApp</Navbar.Brand>
+        <Navbar.Brand className="logo" href="/">+FoodApp</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-            <Nav.Link href="#home">Productos</Nav.Link>
-            <Nav.Link href="#link">Aditivos</Nav.Link>
-            <Nav.Link href="#link">Acerca de nosotros</Nav.Link>
-            <Nav.Link href="#link">Contactanos</Nav.Link>
+            <Nav.Link >Productos</Nav.Link>
+            <Nav.Link >Aditivos</Nav.Link>
+            <Nav.Link >Acerca de nosotros</Nav.Link>
+            <Nav.Link >Contactanos</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>

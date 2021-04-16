@@ -6,24 +6,23 @@ import AddittivesList from '../components/ProductDetails/AdditivesList'
 import IngredientsList from '../components/ProductDetails/IngredientsList'
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
-
-
+import Alert from 'react-bootstrap/Alert'
 
 const ProductDetails = () => {
     const [productGet, setProduct] = useState({
         'products':[], 'additives':[], 'ingredients': []
     });
-    
-    const {barcode} = useParams();
+    const productNotFund = "Product not found";
+    const {idProduct} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/products/${barcode}`)
+        fetch(`http://localhost:3001/products/${idProduct}`)
         .then(response => response.json())
         .then(data => setProduct(data));
     },[])
     const detalleProducto = productGet.products;
 
-    if(detalleProducto !== undefined){
+    if(detalleProducto !== undefined || !productGet.error === productNotFund){
         return(
             <>
                 <ProductDetail {...detalleProducto}>
@@ -40,7 +39,13 @@ const ProductDetails = () => {
         );
     }else{
         return(
-            <NotFound></NotFound>
+            <>
+                <br/>
+                <Alert variant="warning">
+                   Este producto no está registrado
+                </Alert>
+                <NotFound></NotFound>
+            </>
         );
     }
 
