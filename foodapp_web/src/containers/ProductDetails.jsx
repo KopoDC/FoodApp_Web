@@ -16,7 +16,9 @@ const ProductDetails = () => {
     const {idProduct} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:3001/products/${idProduct}`)
+        fetch(`https://foodappback.herokuapp.com/products/${idProduct}`,{
+            credentials:"same-origin"
+        })
         .then(response => response.json())
         .then(data => setProduct(data));
     },[])

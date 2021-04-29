@@ -12,7 +12,9 @@ const Home = () => {
     const [productsUpdated, setProductsUpdated] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:3001/products/lastProducts/Update')
+        fetch('https://foodappback.herokuapp.com/products/lastProducts/Update',{
+            credentials:"same-origin"
+        })
         .then(response => response.json())
         .then(data => setProductsUpdated(data));
     }, []);

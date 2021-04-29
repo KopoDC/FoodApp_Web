@@ -40,7 +40,7 @@ const Footer = () =>(
                         <ul>
                             <a href="https://www.facebook.com/Kopo-Dev-Center-435546483296131/?fref=ts" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-fw" style={{fontSize: 30}} /></a>
                             <a href="https://www.instagram.com/kopodc" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram fa-fw" style={{fontSize: 30}} /></a>
-                            <a target="_blank" rel="noopener noreferrer"><i className="fa fa-whatsapp fa-fw"  style={{fontSize: 30}} /></a>
+                            <a href="*" target="_blank" rel="noopener noreferrer"><i className="fa fa-whatsapp fa-fw"  style={{fontSize: 30}} /></a>
                         </ul>
                     </div>
                 </div>
